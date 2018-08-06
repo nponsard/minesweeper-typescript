@@ -11,11 +11,45 @@
             font-family: verdana;
         }
 
+        .conteneur {
+            display: flex;
+
+        }
+
+        .options {
+            margin: 10px;
+
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        input {
+            width: 50px;
+            height: 20px;
+        }
+
         html,
         body {
             height: 100%;
             width: 100%;
             /*background: black;*/
+        }
+
+        ;
+        #win {
+            color: green;
+        }
+
+        kbd {
+            background-color: lightgray;
+        }
+
+        #loose {
+            color: red;
+
+
         }
 
         canvas {
@@ -30,9 +64,65 @@
 </head>
 
 <body>
-<canvas id="cv"></canvas>
+    <div class="conteneur">
+        <div>
+            <canvas contextmenu="flag();" id="cv"></canvas>
+        </div>
+        <div class="options">
+            <div style="display: flex;">
+                <div>
+                    <div>
+                        <h2 style="display: none;" id="win">Good Job !</h2>
+                        <h2 style="display: none;" id="loose">Maybe another time !</h2>
+
+                    </div>
+                    <div style="display: flex;">
+
+                        <p>Clicks :</p>
+                        <p id="clicks">0</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <p>
+                Usage :
+                <br>
+                <kbd>space</kbd> to restart
+                <br>
+                <kbd>dblclick</kbd> to validate
+                <br>
+                <kbd>click</kbd> to flag
+
+            </p>
+            <form>
+                <h1>options</h1>
+                <p>Mines :
+                    <input id="mines" type="number">
+                </p>
+                <p>
+                    Width :
+                    <input id="sizeX" type="number"> Height :
+                    <input id="sizeY" type="number">
+                </p>
+                <!--
+
+                    <p>
+                        Scale :
+                        <input id="scale" type="number">
+                    </p>
+
+                -->
+
+
+                <button type="button" onclick="restart();">Apply changes (reload)</button>
+            </form>
+
+        </div>
+    </div>
 
 </body>
 
 <script src="index.js"></script>
+
 </html>
