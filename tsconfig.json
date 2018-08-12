@@ -54,6 +54,7 @@
   "files": [
     "grid.ts",
     "index.ts",
-    "listeners.ts"
+    "listeners.ts",
+    "modding.ts"
   ]
 }

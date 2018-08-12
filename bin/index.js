@@ -278,3 +278,8 @@ canvas.addEventListener("dblclick", function (e) {
         render();
     }
 });
+function addMod(location) {
+    let script = document.createElement("script");
+    script.src = location;
+    document.body.appendChild(script);
+}
